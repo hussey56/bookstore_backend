@@ -3,7 +3,7 @@ const dbConnect = require('./database/db');
 const {PORT} = require('./config/config');
 const router = require('./routes/routes');
 const app = express(); 
-
+const cors = require("cors");
 
 //for deployment purpose
 app.use(
