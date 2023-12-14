@@ -6,7 +6,8 @@ const userController = require("../controller/UserController");
 
  // #1. add user infromation to the db
  Router.post('/add_user',userController.register);
-
+// #2 Read user data by its email
+Router.get('/user_data/:email',userController.singleuserdatabyemail);
 
 // admin mangemnet
 
