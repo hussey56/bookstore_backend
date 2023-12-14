@@ -46,6 +46,10 @@ let user;
 const {email} = req.params;
 try {
   user = await User.findOne({email:email});
+  if(user == null){
+    return res.status(200).json({data:null})
+
+  }
 } catch (error) {
   return next(error);
 }
