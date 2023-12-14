@@ -15,12 +15,10 @@ const userSchema = new Schema({
   },
   shipping_address: {
     type: String,
-    required: true,
     default:""
   },
   payment_method:{
     type:Array,
-    required:true,
     default:[{"cod":true}]
   },
 
