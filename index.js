@@ -1,7 +1,8 @@
 const express = require('express');
 const dbConnect = require('./database/db');
 const {PORT} = require('./config/config');
-const router = require('./routes/routes');
+const router = require('./routes/router');
+const errorHandler = require('./middleware/errorHandler')
 const app = express(); 
 const cors = require("cors");
 
@@ -22,6 +23,6 @@ dbConnect();
 // testing
 app.use(router);
 
-// app.use(errorHandler);
+app.use(errorHandler);
 
 app.listen(PORT,console.log(`Backend is running on the ${PORT}`))
